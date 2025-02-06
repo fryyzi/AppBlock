@@ -1,0 +1,33 @@
+﻿<Window x:Class="BLockGame.Main_Manu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLockGame"
+        mc:Ignorable="d"
+        Title="Main_Manu" Height="680" Width="800">
+    <Grid Background="#FF24A6D2">
+
+        <Label Content="App Game" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="50"
+               FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="White" Offset="0.0"/>
+                    <GradientStop Color="LightGray" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="600">
+            <Button Content="Заблокувати додаток" FontSize="30" Height="80" Background="#FF2C69B2"
+                    Foreground="White" Padding="10" BorderThickness="0" Click="Button_Click_3" />
+            <Button Content="Розблокувати додаток" FontSize="30" Height="80" Background="#FF2C69B2"
+                    Foreground="White" Padding="10" BorderThickness="0" Click="Button_Click"/>
+            <Button Content="Мова інтерфейса" FontSize="30" Height="80" Background="#FF2C69B2"
+                    Foreground="White" Padding="10" BorderThickness="0"/>
+            <Button Content="Про додаток" FontSize="30" Height="80" Background="#FF2C69B2"
+                    Foreground="White" Padding="10" BorderThickness="0" Click="Button_Click_2"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

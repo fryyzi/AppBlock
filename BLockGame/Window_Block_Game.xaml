@@ -1,0 +1,27 @@
+﻿<Window x:Class="BLockGame.Window_Block_Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLockGame"
+        mc:Ignorable="d"
+        Title="Window_Block_Game" Height="673" Width="800">
+
+    <Grid Margin="0,0,0,-6" Background="#FF24AEA9">
+        <Label Content="Вікно блокування" HorizontalAlignment="Center" VerticalAlignment="Top" Height="80" Width="412" FontSize="50px"/>
+        <TextBox x:Name="Id_Game" HorizontalAlignment="Center" Margin="0,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="514" Height="30" FontSize="20px"/>
+        <Label Content="Вставіть назву програми (Скопіюйте назву напрямік з диспечера задач)" HorizontalAlignment="Center" Margin="0,75,0,522"  FontSize="20px" Width="692"/>
+        <ComboBox x:Name="DayComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Width="514" Height="32" Margin="0,323,0,0"/>
+        <Label Content="Встановіть дні в які можете використовувати програму" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20px" Margin="0,286,0,0"/>
+        <Button Content="Застосувати " HorizontalAlignment="Left" Margin="594,568,0,0" VerticalAlignment="Top" Height="57" Width="196" FontSize="30px" Click="Button_Click"/>
+        <Label Content="Вкажіть назву програми яку хочете заблокувати" HorizontalAlignment="Center" Margin="0,201,0,0" VerticalAlignment="Top" FontSize="20px"/>
+        <TextBox x:Name="NameBlockGameTextBox" HorizontalAlignment="Center" Margin="0,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="514" Height="30" FontSize="20px"/>
+        <Button x:Name="ExitButton" Content="Назад" HorizontalAlignment="Left" Margin="10,568,0,0" VerticalAlignment="Top" Height="50" Width="163" FontSize="26px" Click="ExitButton_Click"/>
+        <CheckBox x:Name="TimeCheckBox" Content="Встановити час?" HorizontalAlignment="Left" Margin="194,371,0,0" VerticalAlignment="Top" FontSize="20" Width="301" Checked="TimeCheckBox_Checked" Unchecked="TimeCheckBox_Unchecked_1"/>
+        <TextBox x:Name="StartTimeTextBox" HorizontalAlignment="Left" Margin="143,488,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Height="40" FontSize="20" Visibility="Hidden"/>
+        <TextBox x:Name="EndTimeTextBox" HorizontalAlignment="Left" Margin="448,488,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="40" FontSize="20" Visibility="Hidden"/>
+        <Label x:Name="StartLable" Content="Від" HorizontalAlignment="Left" Margin="143,458,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="-0.161,0.53" Visibility="Hidden" />
+        <Label x:Name="EndLable" Content="До" HorizontalAlignment="Left" Margin="444,458,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.892,0.209" Visibility="Hidden"/>
+        <Label x:Name="TextTimeInfo" Content="Встановіть час роботи програми\гри" HorizontalAlignment="Left" Margin="89,401,0,0" VerticalAlignment="Top" FontSize="35" Visibility="Hidden"/>
+    </Grid>
+</Window>

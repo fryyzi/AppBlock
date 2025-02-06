@@ -1,0 +1,13 @@
+﻿<Window x:Class="BLockGame.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLockGame"
+        mc:Ignorable="d"
+        Title="About" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,18,0,0" TextWrapping="Wrap" Text="AppBlocker дозволяє користувачам обмежувати доступ до певних програм на своєму ПК. Це ідеальний інструмент для підвищення продуктивності, створення безпечного середовища для дітей або запобігання використанню небажаного програмного забезпечення." VerticalAlignment="Top" FontSize="40"/>
+
+    </Grid>
+</Window>

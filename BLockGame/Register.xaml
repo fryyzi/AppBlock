@@ -1,0 +1,20 @@
+﻿<Window x:Class="BLockGame.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLockGame"
+        mc:Ignorable="d"
+        Title="Register" Height="691" Width="569">
+    <Grid Margin="0,0,0,-6" Background="#FF1EC2B6">
+        <Label Content="Реєстарція" HorizontalAlignment="Center" Margin="0,-21,0,0" VerticalAlignment="Top" FontSize="100px"/>
+        <TextBox x:Name="GmailTextBox" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368" Height="64" FontSize="40px"/>
+        <Label Content="Введіть свою пошту" HorizontalAlignment="Left" Margin="92,144,0,0" VerticalAlignment="Top" FontSize="30px"/>
+        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Center" Margin="0,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368" Height="64" FontSize="40px"/>
+        <Label Content="Введіть логін" HorizontalAlignment="Left" Margin="92,285,0,0" VerticalAlignment="Top" FontSize="30px"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Margin="0,467,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368" Height="64" FontSize="40px"/>
+        <Label Content="Введіть пароль" HorizontalAlignment="Left" Margin="92,412,0,0" VerticalAlignment="Top" FontSize="30px"/>
+        <Button Content="Створити аккаунт" HorizontalAlignment="Center" Margin="0,499,0,0" VerticalAlignment="Top" Height="63" Width="308" FontSize="30px" Click="Button_Click" Background="#FF167A86"/>
+        <Button Content="Google" HorizontalAlignment="Left" Margin="134,589,0,0" VerticalAlignment="Top" Height="58" Width="104" FontSize="24px" Click="Button_Click_1"/>
+    </Grid>
+</Window>
