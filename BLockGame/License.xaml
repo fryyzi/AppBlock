@@ -1,0 +1,19 @@
+﻿<Window x:Class="BLockGame.License"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLockGame"
+        mc:Ignorable="d"
+        Title="License" Height="171" Width="789">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="104*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Ведіть ключь від ліцензії" FontSize="40" HorizontalAlignment="Left" Margin="165,-7,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Button Content="Застосувати" FontSize="23" HorizontalAlignment="Left" Margin="152,107,0,0" VerticalAlignment="Top" Grid.Column="1" Height="38" Width="150" Click="Button_Click"/>
+        <TextBox x:Name="TextBoxKey" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="165,0,0,0" TextWrapping="Wrap" FontSize="23" VerticalAlignment="Center" Width="460" Height="35"/>
+
+    </Grid>
+</Window>

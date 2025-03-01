@@ -11,14 +11,11 @@ using WpfApp = System.Windows.Application;
 using WpfMessageBox = System.Windows.MessageBox;
 using System.Text;
 using System.Runtime.InteropServices;
+using System.Windows.Media;
 
 
 namespace BLockGame
 {
-    /// <summary>
-    /// Логика взаимодействия для Main_Manu.xaml
-    /// </summary>
-    ///
     public partial class Main_Manu : Window
     {
 
@@ -37,6 +34,10 @@ namespace BLockGame
         string NicknameUserEmail;
         string UserGmail;
 
+        string FileCode = "3122312d2-odm0if3jf3ur0fjmrr033rc";
+        string ViewFileCOde = string.Empty;
+        string FileText = string.Empty;
+
         DateTime now = DateTime.Now;
         CultureInfo culture = new CultureInfo("uk-UA");
 
@@ -48,16 +49,30 @@ namespace BLockGame
         {
             InitializeComponent();
 
+            if(Base_User.IsAutotization){
+                trayIcon = new NotifyIcon
+                {
 
-            trayIcon = new NotifyIcon
-            {
+                    Icon = new Icon(SystemIcons.Application, 40, 40),
+                    Text = "BlockGame",
+                    Visible = true,
+                    ContextMenuStrip = new ContextMenuStrip()
+                };
 
-                Icon = new Icon(SystemIcons.Application, 40, 40),
-                Text = "BlockGame",
-                Visible = true,
-                ContextMenuStrip = new ContextMenuStrip()
-            };
+                trayIcon.ContextMenuStrip.Items.Add("Відкрити ", null, OpenApp);
+                trayIcon.ContextMenuStrip.Items.Add("Закрити", null, ExitApp);
 
+                this.Closing += Windows_Closing;
+            }
+
+            //Ліцензія
+            FileText = File.ReadAllText("F:\\programing\\Project\\Block Game\\BLockGame\\BLockGame\\bin\\Debug\\net8.0-windows\\Code.txt");
+            if(FileText == FileCode){
+                DeleteApp.IsEnabled = false;
+                DeleteApp.Foreground = new SolidColorBrush(Colors.Black);
+            }
+
+            //Підключення до бд
             var client = new MongoClient("mongodb+srv://fryyzihnk:TgBtqkuh70KbK6JX@clusteruser.rhkqo.mongodb.net/BLockGame?retryWrites=true&w=majority&appName=ClusterUser");
             var database = client.GetDatabase("BLockGame");
 
@@ -80,12 +95,11 @@ namespace BLockGame
                 NicknameUser = user["Login"].ToString();
             }
 
-            trayIcon.ContextMenuStrip.Items.Add("Відкрити ", null, OpenApp);
-            trayIcon.ContextMenuStrip.Items.Add("Закрити", null, ExitApp);
+            
 
             string gameFolderPath = @"null";
 
-            this.Closing += Windows_Closing;
+            
 
             IntStartTime = int.Parse(StartTime);
             IntEndTime = int.Parse(EndTime);
@@ -96,7 +110,7 @@ namespace BLockGame
         private void MonitorGameStatus(string IdProgram, int StartTime, int EndTime, string Day )
         {
             string dayOfWeekUkrainian = now.ToString("dddd", culture);
-            if (Base_User.User == NicknameUser)
+            if (Base_User.User == NicknameUserEmail)
             {
                 if(now.Hour >= StartTime && now.Hour < EndTime){
                     if (dayOfWeekUkrainian.Equals(Day, StringComparison.OrdinalIgnoreCase)){
@@ -180,8 +194,10 @@ namespace BLockGame
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            UnBlock unBlock = new UnBlock();
-            unBlock.Show();
+            
+            License license = new License();
+            license.Show();
+            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

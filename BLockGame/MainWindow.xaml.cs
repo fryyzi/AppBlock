@@ -20,6 +20,7 @@ using Google.Apis.Services;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using Microsoft.VisualBasic.ApplicationServices;
+using static BLockGame.Model_database;
 
 
 
@@ -30,6 +31,7 @@ namespace BLockGame
 
         private static IMongoCollection<BsonDocument> _collection;
         Main_Manu main_Manu = new Main_Manu();
+
 
 
 
@@ -65,12 +67,14 @@ namespace BLockGame
                 {
                     if (EnterPassword == password)
                     {
+                        Base_User.IsAutotization = true;
+                        
                         Main_Manu main_Manu = new Main_Manu();
                         Base_User.User = EnterLogin;
-
                         main_Manu.Show();
                         this.Close();
                         return;
+                        
                     }
                     if (EnterPassword != password)
                     {

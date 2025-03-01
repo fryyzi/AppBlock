@@ -5,23 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BLockGame"
         mc:Ignorable="d"
-        Title="Window_Block_Game" Height="673" Width="800">
+        Title="Вікно блокування" Height="673" Width="800" WindowStartupLocation="CenterScreen" Background="#FF2E3440">
 
-    <Grid Margin="0,0,0,-6" Background="#FF24AEA9">
-        <Label Content="Вікно блокування" HorizontalAlignment="Center" VerticalAlignment="Top" Height="80" Width="412" FontSize="50px"/>
-        <TextBox x:Name="Id_Game" HorizontalAlignment="Center" Margin="0,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="514" Height="30" FontSize="20px"/>
-        <Label Content="Вставіть назву програми (Скопіюйте назву напрямік з диспечера задач)" HorizontalAlignment="Center" Margin="0,75,0,522"  FontSize="20px" Width="692"/>
-        <ComboBox x:Name="DayComboBox" HorizontalAlignment="Center" VerticalAlignment="Top" Width="514" Height="32" Margin="0,323,0,0"/>
-        <Label Content="Встановіть дні в які можете використовувати програму" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20px" Margin="0,286,0,0"/>
-        <Button Content="Застосувати " HorizontalAlignment="Left" Margin="594,568,0,0" VerticalAlignment="Top" Height="57" Width="196" FontSize="30px" Click="Button_Click"/>
-        <Label Content="Вкажіть назву програми яку хочете заблокувати" HorizontalAlignment="Center" Margin="0,201,0,0" VerticalAlignment="Top" FontSize="20px"/>
-        <TextBox x:Name="NameBlockGameTextBox" HorizontalAlignment="Center" Margin="0,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="514" Height="30" FontSize="20px"/>
-        <Button x:Name="ExitButton" Content="Назад" HorizontalAlignment="Left" Margin="10,568,0,0" VerticalAlignment="Top" Height="50" Width="163" FontSize="26px" Click="ExitButton_Click"/>
-        <CheckBox x:Name="TimeCheckBox" Content="Встановити час?" HorizontalAlignment="Left" Margin="194,371,0,0" VerticalAlignment="Top" FontSize="20" Width="301" Checked="TimeCheckBox_Checked" Unchecked="TimeCheckBox_Unchecked_1"/>
-        <TextBox x:Name="StartTimeTextBox" HorizontalAlignment="Left" Margin="143,488,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Height="40" FontSize="20" Visibility="Hidden"/>
-        <TextBox x:Name="EndTimeTextBox" HorizontalAlignment="Left" Margin="448,488,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Height="40" FontSize="20" Visibility="Hidden"/>
-        <Label x:Name="StartLable" Content="Від" HorizontalAlignment="Left" Margin="143,458,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="-0.161,0.53" Visibility="Hidden" />
-        <Label x:Name="EndLable" Content="До" HorizontalAlignment="Left" Margin="444,458,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.892,0.209" Visibility="Hidden"/>
-        <Label x:Name="TextTimeInfo" Content="Встановіть час роботи програми\гри" HorizontalAlignment="Left" Margin="89,401,0,0" VerticalAlignment="Top" FontSize="35" Visibility="Hidden"/>
+    <Grid Margin="0,0,0,-16">
+        <Label Content="🔒 Вікно блокування" 
+               HorizontalAlignment="Center" VerticalAlignment="Top" 
+               FontSize="36" Foreground="White" 
+               FontWeight="Bold" Margin="0,10,0,0"/>
+        <Label Content="📋 Вставіть назву програми (Скопіюйте з диспетчера задач)" 
+               HorizontalAlignment="Left" Margin="143,85,0,507" 
+               FontSize="18" Foreground="White"/>
+        <Label Content="🎮 Вкажіть назву гри для блокування" 
+               HorizontalAlignment="Center" Margin="0,193,0,405" 
+               FontSize="18" Foreground="White"/>
+        <Label Content="📆 Встановіть дозволені дні" 
+               HorizontalAlignment="Left" Margin="276,283,0,318" 
+               FontSize="18" Foreground="White"/>
+
+        <TextBox x:Name="Id_Game" 
+                 HorizontalAlignment="Left" Margin="148,136,0,470" 
+                 Width="500" FontSize="18" Padding="10"
+                 BorderBrush="#88C0D0" Background="#D8DEE9" Foreground="Black"/>
+        <ComboBox x:Name="DayComboBox" 
+                  HorizontalAlignment="Left" Margin="148,325,0,293" 
+                  Width="500" FontSize="18"
+                  Background="#D8DEE9" Foreground="Black"/>
+
+        <TextBox x:Name="NameBlockGameTextBox" 
+                 HorizontalAlignment="Center" Margin="0,238,0,373" 
+                 Width="500" FontSize="18" Padding="10"
+                 BorderBrush="#88C0D0" Background="#D8DEE9" Foreground="Black"/>
+
+        <CheckBox x:Name="TimeCheckBox" 
+                  Content="⏳ Встановити час?" 
+                  HorizontalAlignment="Center" Margin="0,370,0,243" 
+                  FontSize="18" Foreground="White"
+                  Checked="TimeCheckBox_Checked" Unchecked="TimeCheckBox_Unchecked_1"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="235,360,0,60">
+            <Label x:Name="StartLable" Content="Від" FontSize="18" Foreground="White" Height="107" Visibility="Hidden"/>
+            <TextBox x:Name="StartTimeTextBox" Width="120" Height="40" FontSize="18" 
+                     BorderBrush="#88C0D0" Background="#D8DEE9" Foreground="Black" 
+                     Padding="5" Margin="10,0,10,0" Visibility="Hidden"/>
+            <Label x:Name="EndLable" Content="До" FontSize="18" Foreground="White" Height="110" Width="36" Visibility="Hidden"/>
+            <TextBox x:Name="EndTimeTextBox" Width="115" Height="40" FontSize="18" 
+                     BorderBrush="#88C0D0" Background="#D8DEE9" Foreground="Black" 
+                     Padding="5" RenderTransformOrigin="0.515,-0.997" Visibility="Hidden"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="206,518,0,-18">
+            <Button x:Name="ExitButton" Content="⏪ Назад" 
+                    Width="180" Height="50" FontSize="20" Margin="10"
+                    Background="#BF616A" Foreground="White" 
+                    BorderThickness="0" Cursor="Hand"
+                    Click="ExitButton_Click"/>
+            <Button Content="✅ Застосувати" 
+                    Width="180" Height="50" FontSize="20"
+                    Background="#88C0D0" Foreground="Black" 
+                    BorderThickness="0" Cursor="Hand"
+                    Click="Button_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -891,7 +891,8 @@
     "net8.0-windows7.0": [
       "Google.Apis.Auth >= 1.68.0",
       "Google.Apis.PeopleService.v1 >= 1.68.0.3359",
-      "MongoDB.Driver >= 3.1.0"
+      "MongoDB.Driver >= 3.1.0",
+      "Newtonsoft.Json >= 13.0.3"
     ]
   },
   "packageFolders": {
@@ -955,6 +956,10 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[3.1.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           }
         },
         "imports": [

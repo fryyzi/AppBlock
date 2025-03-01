@@ -5,12 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BLockGame"
         mc:Ignorable="d"
-        Title="UnBlock" Height="450" Width="800">
+        Title="UnBlock" Height="450" Width="800" Background="#2E3440" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBlock x:Name="DataTextBox" HorizontalAlignment="Left" Height="183" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="790" Background="#FFF0C7C7"/>
-        <Button x:Name="UpdateButton" Content="Оновити" FontSize="30" HorizontalAlignment="Left" Margin="10,362,0,0" VerticalAlignment="Top" Height="62" Width="168" Click="UpdateButton_Click"/>
-        <Button Content="Видалити" FontSize="30" HorizontalAlignment="Left" Margin="622,362,0,0" VerticalAlignment="Top" Height="62" Width="168" Click="Button_Click"/>
-        <TextBox x:Name="DeteleAppTextBox" HorizontalAlignment="Left" Margin="56,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="678" Height="54"/>
-        <TextBlock HorizontalAlignment="Left" Margin="94,217,0,0" TextWrapping="Wrap" Text="Вкажіть назву програми яку хочете видалити" FontSize="30" VerticalAlignment="Top"/>
+        <TextBlock x:Name="DataTextBox" 
+                   HorizontalAlignment="Stretch" 
+                   Height="180" 
+                   Margin="10,10,10,0" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   Background="#3B4252" 
+                   Foreground="White"
+                   FontSize="16"
+                   Padding="10"
+                   Text="Тут буде список доданих програм..." />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,330,0,0">
+            <Button x:Name="UpdateButton" 
+                    Content="Оновити" 
+                    FontSize="20" 
+                    Width="180" 
+                    Height="60" 
+                    Margin="10"
+                    Background="#88C0D0" 
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="UpdateButton_Click"/>
+
+            <Button Content="Видалити" 
+                    FontSize="20" 
+                    Width="180" 
+                    Height="60" 
+                    Margin="10"
+                    Background="#BF616A" 
+                    Foreground="White"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="Button_Click"/>
+        </StackPanel>
+        <TextBox x:Name="DeteleAppTextBox" 
+                 HorizontalAlignment="Center" 
+                 Margin="0,250,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="600" 
+                 Height="50"
+                 FontSize="18"
+                 Padding="10"
+                 BorderBrush="#88C0D0"
+                 BorderThickness="2"
+                 Background="#D8DEE9"
+                 Foreground="Black"/>
+        <TextBlock HorizontalAlignment="Center" 
+                   Margin="0,210,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="Вкажіть назву програми, яку хочете видалити" 
+                   FontSize="18" 
+                   Foreground="White"
+                   VerticalAlignment="Top"/>
     </Grid>
 </Window>

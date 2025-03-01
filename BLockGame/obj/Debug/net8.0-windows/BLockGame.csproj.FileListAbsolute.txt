@@ -45,3 +45,7 @@ F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\Ab
 F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\UnBlock.g.cs
 F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\UnBlock.baml
 F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\BLockGame.sourcelink.json
+F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\Choice_Window.g.cs
+F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\License.g.cs
+F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\Choice_Window.baml
+F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\License.baml

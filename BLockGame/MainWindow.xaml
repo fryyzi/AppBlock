@@ -38,7 +38,7 @@
             <Run Text="Немає акаунта? " />
             <Hyperlink NavigateUri="#" RequestNavigate="Register_Click">Створіть його!</Hyperlink>
         </TextBlock>
-        <Button Content="Google" Margin="44,598,431,0" VerticalAlignment="Top"
+        <Button Content="Google" Margin="44,598,416,0" VerticalAlignment="Top"
                 Height="66" FontSize="20" FontWeight="Bold"
                 Background="White" Foreground="Black"
                 BorderThickness="0" Click="Button_Click_1"/>

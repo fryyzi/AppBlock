@@ -12,6 +12,12 @@
     <Compile Update="About.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Choice_Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="License.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Main_Manu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,6 +33,12 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="About.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Choice_Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="License.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

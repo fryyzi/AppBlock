@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLockGame", "BLockGame\BLockGame.csproj", "{3A46CD3C-D0B5-4D39-B325-A2592C35E944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{BF7FE9C1-08F9-4458-AA8B-BCE779F5E80E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A46CD3C-D0B5-4D39-B325-A2592C35E944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A46CD3C-D0B5-4D39-B325-A2592C35E944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A46CD3C-D0B5-4D39-B325-A2592C35E944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A46CD3C-D0B5-4D39-B325-A2592C35E944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF7FE9C1-08F9-4458-AA8B-BCE779F5E80E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7FE9C1-08F9-4458-AA8B-BCE779F5E80E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7FE9C1-08F9-4458-AA8B-BCE779F5E80E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF7FE9C1-08F9-4458-AA8B-BCE779F5E80E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9FA3583-9341-4F80-9E67-9A0BE3DE4B09}
+	EndGlobalSection
+EndGlobal

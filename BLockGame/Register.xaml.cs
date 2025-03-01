@@ -38,7 +38,7 @@ namespace BLockGame
         {
             var Gmail = GmailTextBox.Text;
             var Login = LoginTextBox.Text;
-            var Password = PasswordTextBox.Text;
+            var Password = PasswordTextBox.Password;
 
             if (string.IsNullOrWhiteSpace(Gmail))
             {
@@ -95,7 +95,8 @@ namespace BLockGame
             try{
                 var clientSecrets = new ClientSecrets
                 {
-                    
+                    ClientId = "490119776031-et6qj831qvg1ci7tp8sko7qjv0uuq9nn.apps.googleusercontent.com",
+                    ClientSecret = "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"
                 };
 
                 var flow = new GoogleAuthorizationCodeFlow(new GoogleAuthorizationCodeFlow.Initializer

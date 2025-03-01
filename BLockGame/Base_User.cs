@@ -9,5 +9,6 @@ namespace BLockGame
     class Base_User
     {
         public static string User = "Null";
+        public static bool IsAutotization;
     }
 }

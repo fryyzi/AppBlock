@@ -5,16 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BLockGame"
         mc:Ignorable="d"
-        Title="Register" Height="691" Width="569">
-    <Grid Margin="0,0,0,-6" Background="#FF1EC2B6">
-        <Label Content="Реєстарція" HorizontalAlignment="Center" Margin="0,-21,0,0" VerticalAlignment="Top" FontSize="100px"/>
-        <TextBox x:Name="GmailTextBox" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368" Height="64" FontSize="40px"/>
-        <Label Content="Введіть свою пошту" HorizontalAlignment="Left" Margin="92,144,0,0" VerticalAlignment="Top" FontSize="30px"/>
-        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Center" Margin="0,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368" Height="64" FontSize="40px"/>
-        <Label Content="Введіть логін" HorizontalAlignment="Left" Margin="92,285,0,0" VerticalAlignment="Top" FontSize="30px"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Margin="0,467,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="368" Height="64" FontSize="40px"/>
-        <Label Content="Введіть пароль" HorizontalAlignment="Left" Margin="92,412,0,0" VerticalAlignment="Top" FontSize="30px"/>
-        <Button Content="Створити аккаунт" HorizontalAlignment="Center" Margin="0,499,0,0" VerticalAlignment="Top" Height="63" Width="308" FontSize="30px" Click="Button_Click" Background="#FF167A86"/>
-        <Button Content="Google" HorizontalAlignment="Left" Margin="134,589,0,0" VerticalAlignment="Top" Height="58" Width="104" FontSize="24px" Click="Button_Click_1"/>
+        Title="Register" Height="691" Width="569" Background="#2E3440" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="✍ Реєстрація" 
+               HorizontalAlignment="Center" VerticalAlignment="Top" 
+               FontSize="40" FontWeight="Bold" Foreground="White" Margin="0,20,0,0"/>
+        <Label Content="📧 Введіть свою пошту" 
+               HorizontalAlignment="Left" Margin="92,125,0,474" 
+               FontSize="18" Foreground="White"/>
+
+        <TextBox x:Name="GmailTextBox" 
+                 HorizontalAlignment="Left" Margin="100,167,0,457" 
+                 Width="350" FontSize="18" Padding="10"
+                 BorderBrush="#88C0D0" Background="#D8DEE9" Foreground="Black"/>
+        <Label Content="👤 Введіть логін" 
+               HorizontalAlignment="Left" Margin="100,223,0,379" 
+               FontSize="18" Foreground="White"/>
+
+        <TextBox x:Name="LoginTextBox" 
+                 HorizontalAlignment="Left" Margin="100,255,0,369" 
+                 Width="350" FontSize="18" Padding="10"
+                 BorderBrush="#88C0D0" Background="#D8DEE9" Foreground="Black"/>
+        <Label Content="🔑 Введіть пароль" 
+               HorizontalAlignment="Left" Margin="100,311,0,301" 
+               FontSize="18" Foreground="White"/>
+        <PasswordBox x:Name="PasswordTextBox" 
+                     HorizontalAlignment="Center" Margin="0,361,0,256" 
+                     Width="350" FontSize="18" Padding="10"
+                     BorderBrush="#88C0D0" Background="#D8DEE9" Foreground="Black"/>
+
+        <Button Content="✅ Створити аккаунт" 
+                HorizontalAlignment="Center" Margin="0,461,0,144" 
+                Width="350" FontSize="20" FontWeight="Bold"
+                Background="#88C0D0" Foreground="Black" 
+                BorderThickness="0" Cursor="Hand"
+                Click="Button_Click"/>
+
+        <Button Content="Sign in with Google" 
+                HorizontalAlignment="Left" Margin="25,574,0,35" 
+                Width="250" FontSize="18"
+                Background="White" Foreground="Black" 
+                BorderBrush="Gray" BorderThickness="1"
+                Click="Button_Click_1">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Rectangle Fill="White" RadiusX="5" RadiusY="5"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" 
+                                   Width="25" Height="25" Margin="5"/>
+                            <TextBlock Text="Sign in with Google" FontSize="18" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>

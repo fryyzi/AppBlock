@@ -19,9 +19,9 @@
         </Label>
 
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="600">
-            <Button Content="Заблокувати додаток" FontSize="30" Height="80" Background="#FF2C69B2"
+            <Button x:Name="AddApp" Content="Заблокувати додаток" FontSize="30" Height="80" Background="#FF2C69B2"
                     Foreground="White" Padding="10" BorderThickness="0" Click="Button_Click_3" />
-            <Button Content="Розблокувати додаток" FontSize="30" Height="80" Background="#FF2C69B2"
+            <Button x:Name="DeleteApp" Content="Розблокувати додаток" FontSize="30" Height="80" Background="#FF2C69B2"
                     Foreground="White" Padding="10" BorderThickness="0" Click="Button_Click"/>
             <Button Content="Мова інтерфейса" FontSize="30" Height="80" Background="#FF2C69B2"
                     Foreground="White" Padding="10" BorderThickness="0"/>

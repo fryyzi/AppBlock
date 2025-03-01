@@ -19,9 +19,6 @@ using WpfMessageBox = System.Windows.MessageBox;
 
 namespace BLockGame
 {
-    /// <summary>
-    /// Interaction logic for UnBlock.xaml
-    /// </summary>
     public partial class UnBlock : Window
     {
 
