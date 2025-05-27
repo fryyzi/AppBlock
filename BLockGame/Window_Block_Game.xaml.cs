@@ -31,7 +31,6 @@ namespace BLockGame
             InitializeComponent();
             var client = new MongoClient("mongodb+srv://fryyzihnk:TgBtqkuh70KbK6JX@clusteruser.rhkqo.mongodb.net/BLockGame?retryWrites=true&w=majority&appName=ClusterUser");
             var database = client.GetDatabase("BLockGame");
-
             _collection = database.GetCollection<BsonDocument>("BlockUserGame");
 
             foreach (var day in Day)
@@ -113,6 +112,13 @@ namespace BLockGame
             StartLable.Visibility = Visibility.Hidden;
             EndLable.Visibility = Visibility.Hidden;
             //TextTimeInfo.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Team_Block team_Block = new Team_Block();
+            team_Block.Show();
+            this.Close();
         }
     }
 }

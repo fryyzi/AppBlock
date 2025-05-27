@@ -49,3 +49,5 @@ F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\Ch
 F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\License.g.cs
 F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\Choice_Window.baml
 F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\License.baml
+F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\Steam_Block.g.cs
+F:\programing\Project\Block Game\BLockGame\BLockGame\obj\Debug\net8.0-windows\Steam_Block.baml

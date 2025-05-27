@@ -5,42 +5,107 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BLockGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="722" Width="549">
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#FF1BCCD2" Offset="0"/>
-                <GradientStop Color="#FF1488CC" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <Label Content="Логін" FontSize="70" FontWeight="Bold"
-               HorizontalAlignment="Center" Margin="0,20,0,0" Foreground="White"/>
-        <Grid Margin="44,344,56,0" VerticalAlignment="Top" Height="50">
-            <PasswordBox x:Name="MyPasswordBox" 
-                         Width="380" FontSize="22" Padding="10"
-                         BorderThickness="0" Background="White" Foreground="Black"/>
-        </Grid>
-        <Label Content="Введіть пароль" HorizontalAlignment="Left" Margin="94,276,0,0" VerticalAlignment="Top" FontSize="40px"/>
-        <Label Content="Введіть свій логін" HorizontalAlignment="Left" Margin="94,137,0,0" VerticalAlignment="Top" FontSize="40px"/>
-        <Button x:Name="LoginButton" Content="Увійти"
-                Margin="94,414,106,0" VerticalAlignment="Top"
-                Height="50" FontSize="24" FontWeight="Bold"
-                Background="#FF24919A" Foreground="White"
-                BorderThickness="0"
-                Click="LoginButton_Click"/>
-        <TextBox x:Name="MyLoginBox"
-                 Margin="94,205,106,0" VerticalAlignment="Top" Height="50"
-                 FontSize="22" Padding="10"
-                 BorderThickness="0" Background="White" Foreground="Black"/>
+        Title="Вхід до системи"
+        Height="650" Width="500"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Segoe UI" FontSize="16"
+        Background="#E6F0FA">
 
-        <TextBlock x:Name="NoAccount" HorizontalAlignment="Left" Margin="154,469,0,0" VerticalAlignment="Top"
-                   FontSize="18" Foreground="White">
-            <Run Text="Немає акаунта? " />
-            <Hyperlink NavigateUri="#" RequestNavigate="Register_Click">Створіть його!</Hyperlink>
+    <Window.Resources>
+        <!-- Стилі тіней -->
+        <DropShadowEffect x:Key="ShadowEffect" BlurRadius="10" ShadowDepth="2" Opacity="0.2"/>
+
+        <!-- Стиль текстових полів -->
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#C0C0C0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Effect" Value="{StaticResource ShadowEffect}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0,5,0,15"/>
+        </Style>
+
+        <Style TargetType="PasswordBox">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#C0C0C0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Effect" Value="{StaticResource ShadowEffect}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0,5,0,15"/>
+        </Style>
+
+        <!-- Кнопка -->
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="#4A90E2"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Effect" Value="{StaticResource ShadowEffect}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#357ABD"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="40">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Text="Вхід до акаунта" 
+                   FontSize="32" FontWeight="SemiBold" 
+                   Foreground="#2C3E50"
+                   HorizontalAlignment="Center" Margin="0,0,0,30" Grid.Row="0"/>
+
+        <!-- Логін -->
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Логін" FontSize="14" Foreground="#2C3E50"/>
+            <TextBox x:Name="MyLoginBox"/>
+        </StackPanel>
+
+        <!-- Пароль -->
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="Пароль" FontSize="14" Foreground="#2C3E50"/>
+            <PasswordBox x:Name="MyPasswordBox"/>
+        </StackPanel>
+
+        <!-- Кнопка входу -->
+        <Button x:Name="LoginButton" Content="Увійти" Grid.Row="3" Click="LoginButton_Click"/>
+
+        <!-- Реєстрація -->
+        <TextBlock Grid.Row="4" HorizontalAlignment="Center" Margin="0,15,0,0">
+            <Run Text="Ще не маєте акаунта? "/>
+            <Hyperlink>Зареєструйтеся</Hyperlink>
         </TextBlock>
-        <Button Content="Google" Margin="44,598,416,0" VerticalAlignment="Top"
-                Height="66" FontSize="20" FontWeight="Bold"
-                Background="White" Foreground="Black"
-                BorderThickness="0" Click="Button_Click_1"/>
+
+        <!-- Google кнопка -->
+        <Button Content="Увійти через Google" Background="White" Foreground="#333" 
+                Grid.Row="5" HorizontalAlignment="Center" Width="220"
+                Margin="0,30,0,0"/>
     </Grid>
 </Window>

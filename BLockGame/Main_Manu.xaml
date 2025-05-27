@@ -5,29 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BLockGame"
         mc:Ignorable="d"
-        Title="Main_Manu" Height="680" Width="800">
-    <Grid Background="#FF24A6D2">
+        Title="Головне меню"
+        Height="650" Width="500"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Segoe UI" FontSize="16"
+        Background="#E6F0FA">
 
-        <Label Content="App Game" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="50"
-               FontWeight="Bold">
-            <Label.Foreground>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="White" Offset="0.0"/>
-                    <GradientStop Color="LightGray" Offset="1.0"/>
-                </LinearGradientBrush>
-            </Label.Foreground>
-        </Label>
+    <Window.Resources>
+        <DropShadowEffect x:Key="ShadowEffect" BlurRadius="10" ShadowDepth="2" Opacity="0.2"/>
 
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="600">
-            <Button x:Name="AddApp" Content="Заблокувати додаток" FontSize="30" Height="80" Background="#FF2C69B2"
-                    Foreground="White" Padding="10" BorderThickness="0" Click="Button_Click_3" />
-            <Button x:Name="DeleteApp" Content="Розблокувати додаток" FontSize="30" Height="80" Background="#FF2C69B2"
-                    Foreground="White" Padding="10" BorderThickness="0" Click="Button_Click"/>
-            <Button Content="Мова інтерфейса" FontSize="30" Height="80" Background="#FF2C69B2"
-                    Foreground="White" Padding="10" BorderThickness="0"/>
-            <Button Content="Про додаток" FontSize="30" Height="80" Background="#FF2C69B2"
-                    Foreground="White" Padding="10" BorderThickness="0" Click="Button_Click_2"/>
+        <!-- Стиль кнопок -->
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Background" Value="#4A90E2"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Effect" Value="{StaticResource ShadowEffect}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#357ABD"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <!-- Заголовок -->
+        <TextBlock Text="App Game" FontSize="32" FontWeight="Bold" Foreground="#2C3E50"
+                   HorizontalAlignment="Center" Margin="0,30,0,20"/>
+
+        <!-- Меню -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <Button x:Name="AddApp" Content="🔒 Заблокувати додаток" Click="Button_Click_3"/>
+            <Button x:Name="DeleteApp" Content="🔓 Розблокувати додаток" Click="Button_Click"/>
+            <Button Content="🌐 Мова інтерфейса"/>
+            <Button Content="ℹ️ Про додаток" Click="Button_Click_2"/>
         </StackPanel>
-
     </Grid>
 </Window>

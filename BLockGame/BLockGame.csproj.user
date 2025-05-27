@@ -24,6 +24,9 @@
     <Compile Update="Register.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Steam_Block.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UnBlock.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -48,6 +51,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Register.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Steam_Block.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UnBlock.xaml">
