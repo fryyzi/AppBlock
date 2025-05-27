@@ -12,4 +12,19 @@
   Щоб запустити проєкт потрібно скачати репозиторій і в файлі AddBlock буде сама програма
 
   ### 1. Клонування репозиторію
-  git clone https://github.com/твій-юзернейм/назва-проєкту.git
+  git clone https://github.com/fryyzi/AppBlock.git
+  cd AppBlock
+
+  # 2. Базові команди
+- Встановлення залежностей   dotnet restore
+- Запуск проєкту   dotnet run
+
+  #Ліцензія
+  Щоб получити ліцнзію(Платна) потрібно звернутися до https://t.me/Fryyzi
+
+  Автор
+  - Telegram (https://t.me/Fryyzi)
+  - instagram (https://www.instagram.com/vvv.viktor_hnkigsh=MW91emcybjhndDZmOA%3D%3D&utm_source=qr)
+  - Gmail (fryyzihnk@gmail.com)
+  
+  
